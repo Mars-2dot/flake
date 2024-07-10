@@ -9,7 +9,12 @@
     ./modules/xserver.nix
   ];
 
-  nixpkgs.overlays = [ inputs.polymc.overlay ];
+  nixpkgs.overlays = [
+      (_: prev: {
+          python312 = prev.python312.override { packageOverrides = _: pysuper: { nose = pysuper.pynose; }; };
+      })
+      inputs.polymc.overlay
+  ];
 
   networking.hostName = "nixos"; # Define your hostname.
 
