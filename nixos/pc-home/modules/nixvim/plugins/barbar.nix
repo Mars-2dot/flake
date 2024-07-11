@@ -1,6 +1,6 @@
 {
   programs.nixvim.plugins.barbar = {
-    enable = true;
+    enable = false;
 #    keymaps = {
 #      silent = true;
 
