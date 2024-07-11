@@ -1,12 +1,12 @@
 {
   programs.nixvim.plugins.barbar = {
     enable = true;
-    keymaps = {
-      silent = true;
+#    keymaps = {
+#      silent = true;
 
-      next = "<TAB>";
-      previous = "<S-TAB>";
+#      next = "<TAB>";
+#      previous = "<S-TAB>";
       # close = "<C-q>";
-    };
+#    };
   };
 }
