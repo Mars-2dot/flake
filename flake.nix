@@ -17,7 +17,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    polymc.url = "github:PolyMC/PolyMC";
+    #polymc.url = "github:PolyMC/PolyMC";
   };
 
   outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:

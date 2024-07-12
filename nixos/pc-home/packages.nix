@@ -20,7 +20,6 @@
     obsidian
     zoom-us
     pcmanfm-qt
-    polymc
     kitty
     mc
     pkgs.gnome-calculator
@@ -88,7 +87,7 @@
     cliphist
 
     # WMs and stuff
-    herbstluftwm
+    #herbstluftwm
     hyprland
     seatd
     xdg-desktop-portal-hyprland
@@ -101,8 +100,6 @@
     pamixer
 
     # GPU stuff 
-    amdvlk
-    rocm-opencl-icd
     glaxnimate
 
     # Screenshotting
