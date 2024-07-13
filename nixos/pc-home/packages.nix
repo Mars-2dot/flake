@@ -21,18 +21,10 @@
     zoom-us
     pcmanfm-qt
     kitty
-    dbeaver-bin
     mc
     google-chrome
     pkgs.gnome-calculator
     postman
-    spotify
-    #jetbrains.webstorm
-    #jetbrains.idea-ultimate
-    #jetbrains.goland
-    #jetbrains.pycharm-professional
-    #jetbrains.datagrip
-    #dbeaver-community
 
 
     # Coding stuff
@@ -135,14 +127,17 @@
     appimage-run
     qbittorrent
     firefox
+    spotify
 
-
-#    jetbrains.webstorm
-#    jetbrains.pycharm-professional
-#    jetbrains.idea-ultimate
-#    jetbrains.goland
-#   jetbrains.datagrip
-#    jetbrains.clion
+    jetbrains.webstorm
+    jetbrains.pycharm-professional
+    jetbrains.idea-ultimate
+    jetbrains.goland
+    jetbrains.datagrip
+    jetbrains.clion
+    vscode
+    dbeaver-bin
+    drawio
     # networking
 
   ];
