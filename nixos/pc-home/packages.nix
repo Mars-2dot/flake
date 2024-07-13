@@ -119,6 +119,7 @@
     docker-compose
     kubernetes
     kubernetes-helm
+    lens
 
     #apps
     distrobox

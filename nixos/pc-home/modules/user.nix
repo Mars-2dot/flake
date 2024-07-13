@@ -7,7 +7,7 @@
     users.ilya = {
       isNormalUser = true;
       description = "ilya";
-      extraGroups = [ "networkmanager" "wheel" "input" "libvirtd" ];
+      extraGroups = [ "networkmanager" "wheel" "input" "libvirtd" "docker" ];
       packages = with pkgs; [];
     };
   };

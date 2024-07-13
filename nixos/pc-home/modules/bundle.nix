@@ -1,6 +1,7 @@
 {
   imports = [
     ./nvidia.nix
+    ./docker.nix
     ./bootloader.nix
     ./sound.nix
     ./zram.nix
