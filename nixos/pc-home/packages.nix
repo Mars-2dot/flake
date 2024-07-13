@@ -64,6 +64,7 @@
     git-credential-oauth
     bluez-tools
 
+
     # GUI utils
     feh
     imv
