@@ -21,7 +21,9 @@
     zoom-us
     pcmanfm-qt
     kitty
+    dbeaver-bin
     mc
+    google-chrome
     pkgs.gnome-calculator
     postman
     spotify
@@ -132,6 +134,15 @@
     appimagekit
     appimage-run
     qbittorrent
+    firefox
+
+
+#    jetbrains.webstorm
+#    jetbrains.pycharm-professional
+#    jetbrains.idea-ultimate
+#    jetbrains.goland
+#   jetbrains.datagrip
+#    jetbrains.clion
     # networking
 
   ];

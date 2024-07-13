@@ -6,7 +6,11 @@
     settings = {
       "$mainMod" = "SUPER";
 
-      monitor = ",auto,auto,1";
+      monitor = [ 
+        ",preferred,auto,1.5"
+#        "DP-2,3840x2160@144,0x0,1.5"
+#        "DP-3,3840x2160@59,0x0,1.5"
+      ];
 
       #env = [
        # "XDG_CURRENT_DESKTOP,Hyprland"
@@ -60,7 +64,7 @@
 
         layout = "dwindle";
 
-        no_cursor_warps = false;
+        #no_cursor_warps = false;
       };
 
       decoration = {
@@ -100,9 +104,9 @@
         preserve_split = true; # you probably want this
       };
 
-      master = {
-        new_is_master = true;
-      };
+      #master = {
+      #  new_is_master = true;
+      #};
 
       gestures = {
         workspace_swipe = true;
@@ -127,7 +131,7 @@
 
       exec-once = [
         "swww init"
-        "swww img ~/Downloads/nixos-chan.png"
+        "swww img /home/ilya/Downloads/austronaut.jpg"
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
