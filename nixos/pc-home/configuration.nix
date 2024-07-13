@@ -28,30 +28,10 @@ services.resolved = {
   i18n.defaultLocale = "en_US.UTF-8"; # Select internationalisation properties.
 
    # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
-  #hardware.nvidia.powerManagement.finegrained = lib.mkForce false;
-  hardware.nvidia = {
-
-    # Modesetting is required.
-    modesetting.enable = true;
-
-    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-    # Enable this if you have graphical corruption issues or application crashes after waking
-    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
-    # of just the bare essentials.
-    powerManagement.enable = true;
-
-    # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-    powerManagement.finegrained = false;
-
-    open = false;
-
-    nvidiaSettings = true;
-
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-
-  };
+  
+  boot.extraModprobeConfig = ''
+    options nvidia NVreg_RegistryDwords="PowerMizerEnable=0x1; PerfLevelSrc=0x2222; PowerMizerLevel=0x3; PowerMizerDefault=0x3; PowerMizerDefaultAC=0x3"
+  '';
 
   # NixOS specialization named 'nvidia-sync'. Provides the ability
   # to switch the Nvidia Optimus Prime profile
@@ -80,7 +60,7 @@ services.resolved = {
                     QT_QPA_PLATFORM = "wayland";
                     QT_QPA_PLATFORMTHEME = "qt5ct";
 
-                    GDK_SCALE = "2";
+                    GDK_SCALE = "1";
 
                     ELECTRON_OZONE_PLATFORM_HINT = "auto";
 

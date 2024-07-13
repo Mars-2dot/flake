@@ -1,4 +1,4 @@
-{config}: {
+{config, ...}: {
   services.xserver.videoDrivers = ["nvidia"];
   #hardware.nvidia.powerManagement.finegrained = lib.mkForce false;
   hardware.nvidia = {
