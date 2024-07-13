@@ -60,6 +60,8 @@
     openssl
     lazygit
     bluez
+    libsecret
+    git-credential-oauth
     bluez-tools
 
     # GUI utils

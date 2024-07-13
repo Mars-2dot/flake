@@ -9,7 +9,7 @@
       monitor = [ 
 #        ",preferred,auto,1.5"
         "DP-2,3840x2160@144,2560x0,1.5"
-        "DP-3,3840x2160@59,0x0,1.5"
+        "DP-3,3840x2160@60,0x0,1.5"
         "Unknown-1,disable"
       ];
 
