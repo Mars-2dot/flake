@@ -6,16 +6,31 @@
     settings = {
       "$mainMod" = "SUPER";
 
-      monitor = ",1920x1080@90,auto,1";
+      monitor = ",auto,auto,1";
 
-      env = [
-        "XDG_CURRENT_DESKTOP,Hyprland"
-        "XDG_SESSION_TYPE,wayland"
-        "XDG_SESSION_DESKTOP,Hyprland"
-        "XCURSOR_SIZE,36"
-        "QT_QPA_PLATFORM,wayland"
-        "XDG_SCREENSHOTS_DIR,~/screens"
-      ];
+      #env = [
+       # "XDG_CURRENT_DESKTOP,Hyprland"
+    #    "XDG_SESSION_TYPE,wayland"
+    #    "XDG_SESSION_DESKTOP,Hyprland"
+     #   "XCURSOR_SIZE,36"
+      #  "QT_QPA_PLATFORM,wayland"
+       # "XDG_SCREENSHOTS_DIR,~/screens"
+
+ #       "GBM_BACKEND,nvidia-drm"
+  #      "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+	  #    "LIBVA_DRIVER_NAME,nvidia"
+	  #    "__GL_GSYNC_ALLOWED,1"
+	  #    "__GL_VRR_ALLOWED,0"
+	  #    "WLR_DRM_NO_ATOMIC,1"
+	  #    "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+	  #    "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+	  #    "QT_QPA_PLATFORM,wayland"
+	  #    "QT_QPA_PLATFORMTHEME,qt5ct"
+	  #    "GDK_SCALE,2"
+	   #   "ELECTRON_OZONE_PLATFORM_HINT,auto"
+	  #    "NVD_BACKEND,direct"
+
+   #   ];
 
       debug = {
         disable_logs = false;

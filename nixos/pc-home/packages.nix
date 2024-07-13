@@ -133,6 +133,7 @@
     appimage-run
     qbittorrent
     # networking
+
   ];
 
   fonts.packages = with pkgs; [
