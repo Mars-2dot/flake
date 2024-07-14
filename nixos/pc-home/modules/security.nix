@@ -1,7 +1,9 @@
 {
- security.sudo.extraRules = [
-    { users = [ "ilya" ];
-      options = [ "NOPASSWD" ];
-    }
- ];
+  security.sudo = {
+    enable = true;
+    extraConfig = ''
+      wheel ALL=(ALL) NOPASSWD: ALL
+    '';
+  };
+
 }

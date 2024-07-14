@@ -25,18 +25,46 @@ services.resolved = {
 
   time.timeZone = "Europe/Moscow"; # Set your time zone.
 
-  i18n.defaultLocale = "en_US.UTF-8"; # Select internationalisation properties.
+#  i18n.defaultLocale = "en_US.UTF-8"; # Select internationalisation properties.
+
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+    supportedLocales = [
+      "en_US.UTF-8/UTF-8"
+      "ru_RU.UTF-8/UTF-8"
+    ];
+  };
+
+#  config = {
+#    i18n.supportedLocales = [
+#      "C.UTF-8/UTF-8"
+#      "en_US.UTF-8/UTF-8"
+#      "ru_RU.UTF-8/UTF-8"
+#    ];
+#  };
 
    # Load nvidia driver for Xorg and Wayland
   
-  boot.extraModprobeConfig = ''
-    options nvidia NVreg_RegistryDwords="PowerMizerEnable=0x1; PerfLevelSrc=0x2222; PowerMizerLevel=0x3; PowerMizerDefault=0x3; PowerMizerDefaultAC=0x3"
-  '';
+
 
   # NixOS specialization named 'nvidia-sync'. Provides the ability
   # to switch the Nvidia Optimus Prime profile
   # to sync mode during the boot process, enhancing performance.
   # Enable OpenGL
+      hardware.opengl = { # this fixes the "glXChooseVisual failed" bug, context:  https://github.com/NixOS/nixpkgs/issues/47932
+        enable = true;
+        driSupport32Bit = true;
+      };
+
+      # optionally enable 32bit pulseaudio support if pulseaudio is enabled
+      #hardware.pulseaudio.support32Bit = config.hardware.pulseaudio.enable;
+
+      hardware.steam-hardware.enable = true;
+
+
+#    meta.maintainers = with maintainers; [ mkg20001 ];
+
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes
 
             environment = {

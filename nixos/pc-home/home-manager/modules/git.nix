@@ -6,6 +6,6 @@
     userEmail = "ilya.boldyrev36@gmail.com";
 
 #    package = pkgs.gitFull;
-    config.credential.helper = "libsecret";
+#    config.credential.helper = "libsecret";
   };
 }

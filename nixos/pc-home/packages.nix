@@ -64,7 +64,6 @@
     git-credential-oauth
     bluez-tools
 
-
     # GUI utils
     feh
     imv
@@ -120,19 +119,29 @@
     #virtualization
     docker
     docker-compose
+    podman
+    dive
+    podman-tui
     kubernetes
     kubernetes-helm
     lens
 
     #apps
     distrobox
+    appimage-run
+    appimagekit
     btop
     appimagekit
     appimage-run
     qbittorrent
     firefox
+    steam-run
+    steam
+    wineWowPackages.waylandFull
+    pkgs.onlyoffice-bin
     spotify
 
+    #develop
     jetbrains.webstorm
     jetbrains.pycharm-professional
     jetbrains.idea-ultimate
@@ -142,6 +151,12 @@
     vscode
     dbeaver-bin
     drawio
+    maven
+    go
+    jdk11
+    jdk17
+    jdk8
+    locale
     # networking
 
   ];
