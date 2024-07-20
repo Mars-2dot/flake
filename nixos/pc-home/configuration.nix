@@ -51,9 +51,9 @@ services.resolved = {
   # to switch the Nvidia Optimus Prime profile
   # to sync mode during the boot process, enhancing performance.
   # Enable OpenGL
-      hardware.opengl = { # this fixes the "glXChooseVisual failed" bug, context:  https://github.com/NixOS/nixpkgs/issues/47932
+      hardware.graphics = { # this fixes the "glXChooseVisual failed" bug, context:  https://github.com/NixOS/nixpkgs/issues/47932
         enable = true;
-        driSupport32Bit = true;
+        #driSupport32Bit = true;
       };
 
       # optionally enable 32bit pulseaudio support if pulseaudio is enabled
@@ -93,6 +93,8 @@ services.resolved = {
                     ELECTRON_OZONE_PLATFORM_HINT = "auto";
 
                     NVD_BACKEND = "direct";
+
+                    _JAVA_AWT_WM_NONEREPARENTING = "1";
                 };
 
                 systemPackages = with pkgs; [

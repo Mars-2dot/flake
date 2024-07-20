@@ -1,7 +1,10 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    xwayland.enable = true;
+    xwayland = {
+        enable = true;
+    #    force_zero_scaling = true;
+    };
 
     settings = {
       "$mainMod" = "SUPER";
@@ -12,30 +15,6 @@
         "DP-3,3840x2160@60,0x0,1.5"
         "Unknown-1,disable"
       ];
-
-      #env = [
-       # "XDG_CURRENT_DESKTOP,Hyprland"
-    #    "XDG_SESSION_TYPE,wayland"
-    #    "XDG_SESSION_DESKTOP,Hyprland"
-     #   "XCURSOR_SIZE,36"
-      #  "QT_QPA_PLATFORM,wayland"
-       # "XDG_SCREENSHOTS_DIR,~/screens"
-
- #       "GBM_BACKEND,nvidia-drm"
-  #      "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-	  #    "LIBVA_DRIVER_NAME,nvidia"
-	  #    "__GL_GSYNC_ALLOWED,1"
-	  #    "__GL_VRR_ALLOWED,0"
-	  #    "WLR_DRM_NO_ATOMIC,1"
-	  #    "QT_AUTO_SCREEN_SCALE_FACTOR,1"
-	  #    "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-	  #    "QT_QPA_PLATFORM,wayland"
-	  #    "QT_QPA_PLATFORMTHEME,qt5ct"
-	  #    "GDK_SCALE,2"
-	   #   "ELECTRON_OZONE_PLATFORM_HINT,auto"
-	  #    "NVD_BACKEND,direct"
-
-   #   ];
 
       debug = {
         disable_logs = false;
@@ -136,6 +115,8 @@
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+        "discord"
+        "google-chrome-stable"
       ];
 
       bind = [
@@ -148,25 +129,25 @@
         "$mainMod, F, togglefloating,"
         "$mainMod, D, exec, wofi --show drun"
         "$mainMod, P, pseudo, # dwindle"
-        "$mainMod, J, togglesplit, # dwindle"
+        "$mainMod, C, togglesplit, # dwindle"
 
         # Move focus with mainMod + arrow keys
-        "$mainMod, left,  movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up,    movefocus, u"
-        "$mainMod, down,  movefocus, d"
+        "$mainMod, h,  movefocus, l"
+        "$mainMod, l, movefocus, r"
+        "$mainMod, k,    movefocus, u"
+        "$mainMod, j,  movefocus, d"
 
         # Moving windows
-        "$mainMod SHIFT, left,  swapwindow, l"
-        "$mainMod SHIFT, right, swapwindow, r"
-        "$mainMod SHIFT, up,    swapwindow, u"
-        "$mainMod SHIFT, down,  swapwindow, d"
+        "$mainMod SHIFT, h,  swapwindow, l"
+        "$mainMod SHIFT, l, swapwindow, r"
+        "$mainMod SHIFT, k,    swapwindow, u"
+        "$mainMod SHIFT, j,  swapwindow, d"
 
         # Window resizing                     X  Y
-        "$mainMod CTRL, left,  resizeactive, -60 0"
-        "$mainMod CTRL, right, resizeactive,  60 0"
-        "$mainMod CTRL, up,    resizeactive,  0 -60"
-        "$mainMod CTRL, down,  resizeactive,  0  60"
+        "$mainMod CTRL, h,  resizeactive, -60 0"
+        "$mainMod CTRL, l, resizeactive,  60 0"
+        "$mainMod CTRL, k,    resizeactive,  0 -60"
+        "$mainMod CTRL, j,  resizeactive,  0  60"
 
         # Switch workspaces with mainMod + [0-9]
         "$mainMod, 1, workspace, 1"
@@ -213,8 +194,8 @@
         # Configuration files
         ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
         ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-        ''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
-        ''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
+        ''$mainMod, F1, exec, alacritty -e sh -c "nvim ~/flake/nixos/pc-home/home-manager/modules/wms/hyprland.nix"''
+        ''$mainMod, F2, exec, alacritty -e sh -c "nvim ~/flake/nixos/pc-home/home-manager/modules/wms/waybar.nix''
         '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
 
         # Waybar

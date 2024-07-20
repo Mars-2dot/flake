@@ -1,5 +1,8 @@
 {
   imports = [
+    ./none-nix.nix
+    #./java.nix
+#    ./steam.nix
     ./nvidia.nix
     ./docker.nix
     ./bootloader.nix

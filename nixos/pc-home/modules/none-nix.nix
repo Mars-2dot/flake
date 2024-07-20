@@ -1,4 +1,4 @@
-{
+{ inputs, pkgs,lib, config, ...}: {
   programs.nix-ld.enable = true;
 
   # "minimum" amount of libraries needed for most games to run without steam-run

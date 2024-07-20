@@ -33,7 +33,7 @@
     };
 
     "clock" = {
-        # timezone = "America/New_York";
+        # timezone =. "America/New_York";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         format = "{:%a; %d %b, %I:%M %p}";
     };

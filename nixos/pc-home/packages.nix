@@ -61,8 +61,14 @@
     lazygit
     bluez
     libsecret
+    gnomeExtensions.dark-style
     git-credential-oauth
     bluez-tools
+    nautilus
+    catppuccin-papirus-folders
+    catppuccin-cursors
+    catppuccin-gtk
+    ventoy-full
 
     # GUI utils
     feh
@@ -89,6 +95,7 @@
     xdg-desktop-portal-hyprland
     polybar
     waybar
+    gnome-multi-writer
 
     # Sound
     pipewire
@@ -139,6 +146,7 @@
     steam
     wineWowPackages.waylandFull
     pkgs.onlyoffice-bin
+    gnome.gnome-control-center
     spotify
 
     #develop

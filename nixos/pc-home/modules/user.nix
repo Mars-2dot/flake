@@ -7,10 +7,12 @@
     users.ilya = {
       isNormalUser = true;
       description = "ilya";
-      extraGroups = [ "networkmanager" "wheel" "input" "libvirtd" "docker" ];
+      extraGroups = [ "networkmanager" "wheel" "input" "libvirtd" "docker" "dialout" "vboxusers" ];
       packages = with pkgs; [];
     };
   };
+
+  users.extraGroups.vboxusers.members = [ "ilya" ];
 
   # Enable automatic login for the user.
   services.getty.autologinUser = "ilya";
