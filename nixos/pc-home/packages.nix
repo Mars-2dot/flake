@@ -132,6 +132,7 @@
     kubernetes
     kubernetes-helm
     lens
+    calicoctl
 
     #apps
     distrobox
@@ -143,6 +144,9 @@
     qbittorrent
     firefox
     steam-run
+    steamcmd
+    openlens
+    inetutils
     steam
     wineWowPackages.waylandFull
     pkgs.onlyoffice-bin
@@ -165,6 +169,7 @@
     jdk17
     jdk8
     locale
+    dolphin
     # networking
 
   ];

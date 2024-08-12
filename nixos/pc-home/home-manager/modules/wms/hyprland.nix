@@ -1,9 +1,17 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    extraConfig = ''
+        xwayland {
+            force_zero_scaling = true
+        }
+    '';
     xwayland = {
         enable = true;
     #    force_zero_scaling = true;
+#        extraConfig = ''
+#            force_zero_scaling = true
+#        '';
     };
 
     settings = {
@@ -125,7 +133,7 @@
         "$mainMod, Return, exec, alacritty"
         "$mainMod, Q, killactive,"
         "$mainMod, M, exit,"
-        "$mainMod, E, exec, dolphin"
+        "$mainMod, E, exec, nautilus"
         "$mainMod, F, togglefloating,"
         "$mainMod, D, exec, wofi --show drun"
         "$mainMod, P, pseudo, # dwindle"

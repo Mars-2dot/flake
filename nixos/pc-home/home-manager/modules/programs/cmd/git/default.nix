@@ -11,8 +11,8 @@
     enable = true;
     package = pkgs.gitAndTools.gitFull;
     lfs.enable = true;
-    userName = "SHTRAMPANTUNC";
-    userEmail = "youngtuctim@gmail.com";
+    userName = "Mars-2dot";
+    userEmail = "ilya.boldyrev36@gmail.com";
     aliases = {
       fpush = "push --force-with-lease";
       aa = "add --all";
@@ -23,14 +23,9 @@
       uncommit = "reset --soft head^";
       unadd = "reset";
     };
-    signing = {
-      key = "D102F2DEE0F857EA307BE46D0FA34C527601B4CC";
-      signByDefault = true;
-    };
     extraConfig = {
-      init = {defaultbranch = "main";};
+      init = {defaultbranch = "master";};
       branch = {sort = "-committerdate";};
-      pull = {rebase = true;};
       push = {default = "simple";};
     };
     ignores = [

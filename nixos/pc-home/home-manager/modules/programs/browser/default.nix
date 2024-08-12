@@ -24,15 +24,15 @@
     profiles = {
       ilya = {
         name = "ilya";
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-          vimium
-          bitwarden
-          sponsorblock
-          ublock-origin
-          simple-translate
-          youtube-shorts-block
-          pkgs.nur.repos.bandithedoge.firefoxAddons.material-icons-for-github
-        ];
+#        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+#          vimium
+#          bitwarden
+#          sponsorblock
+#          ublock-origin
+#          simple-translate
+#          youtube-shorts-block
+#          pkgs.nur.repos.bandithedoge.firefoxAddons.material-icons-for-github
+#        ];
         search = {
           force = true;
           default = "DuckDuckGo";

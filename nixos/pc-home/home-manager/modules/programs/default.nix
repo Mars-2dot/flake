@@ -2,11 +2,11 @@
   imports = [
     ./cmd
     ./gtk
-    ./ssh
-    ./sops
+    #./sops
     ./foot
-    ./media
+    ./media/mpv/default.nix
+    ./media/spotify/default.nix
     ./browser
-    ./discord
+    #./discord
   ];
 }
